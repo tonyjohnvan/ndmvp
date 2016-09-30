@@ -1,0 +1,580 @@
+
+.float {
+
+    -webkit-animation-name: Floating;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+
+    animation-name: Floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@-moz-keyframes Floating {
+    0% {
+        margin-top: 0;
+    }
+    65% {
+        margin-top: -15px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@-webkit-keyframes Floating {
+    0% {
+        margin-top: 0;
+    }
+    65% {
+        margin-top: -15px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes Floating {
+    0% {
+        margin-top: 0;
+    }
+    65% {
+        margin-top: -15px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+a {
+    color: red;
+}
+
+.css_blink {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.67;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.67;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.67;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mainContent {
+    margin: 20px auto;
+    min-height: 666px;
+}
+
+.androidBG {
+    background: url("../../img/Nexus_5_Front_View.png") center center no-repeat;
+    width: 70%;
+    height: 666px;
+    background-size: 100% auto;
+    position: relative;
+    margin: 5px auto;
+}
+
+.ndBotLeftBig {
+    background: url("../../img/NimbleDroid-3d-LaserEyes-MIRROR-XXS-V02-FLAT.png") center center no-repeat;
+    width: 100%;
+    height: 666px;
+    background-size: 100% auto;
+    position: relative;
+    margin: 5px auto;
+    margin-right: -150px;
+}
+
+.ndBotRightSmall {
+    background: url("../../img/NimbleDroid-3d-LaserEyes-XXS-V02-FLAT.png") center center no-repeat;
+    width: 60%;
+    min-height: 120px;
+    background-size: 100% auto;
+    position: relative;
+    margin: 100px auto 5px;
+    margin-left: -150px;
+}
+
+.androidBG .screens {
+    background: url("../../img/screen.gif") center center no-repeat;
+    width: 64.2%;
+    height: 652px;
+    background-size: 100% auto !important;
+    position: relative;
+    margin: 5px auto;
+}
+
+.container .card {
+    padding: 15px 20px;
+    background: white;
+    border-radius: 5px;
+    min-height: 50px;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.fa-check,
+.fa-times,
+.fa-question,
+.fa-refresh {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.roundContainer {
+    margin-top: 30px;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 5px;
+    min-height: 105px;
+    width: 110%;
+    margin-left: -10%;
+    z-index: 100;
+    position: relative;
+}
+
+#pageResult .roundContainer {
+    margin-top: 10px;
+}
+
+.no-margin-side {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.roundContainer.no-margin-side {
+    width: 100%;
+}
+
+.catalogCard {
+    margin-top: 10px;
+}
+
+.roundContainer h3 {
+    margin-top: 10px;
+}
+
+.QAStepsDetail,
+.screenDetectionWindow,
+.testMessageWindow {
+    width: 100%;
+    margin: 10px auto;
+    overflow: hidden;
+    padding: 20px 5px;
+    max-height: 128px;
+    /*height: 128px;*/
+    z-index: 1;
+}
+
+.QAStepsDetail {
+    padding: 5px;
+    max-height: 30px;
+    height: 30px;
+    text-align: center;
+    font-family: SofiaProRegular;
+}
+
+.windowCover {
+    position: relative;
+    background: url("../../img/windowOverlay.png") center center no-repeat;
+    width: 100%;
+    height: 128px;
+    background-size: 100% 128px;
+    margin-top: -138px;
+    z-index: 100;
+}
+
+.testQAText {
+    width: 100%;
+}
+
+.QATestCard h6,
+.screenDetectionWindow h6,
+.testMessageWindow h6 {
+    font-size: 16px;
+    display: inline;
+}
+
+.screenDetectionCard,
+.detailedTestCaseCard {
+    opacity: 1.0;
+}
+
+.nextPageBtn {
+    margin-top: 30px;
+    opacity: 1.0;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=- map screen -=-=-=-=-=-=-=-=-=-=-=-=-*/
+.screenMap {
+    width: 100px;
+    height: 178px;
+    margin: 5px 10px;
+}
+
+.screenMapZero {
+    width: 0px;
+    height: 178px;
+    margin: 10px 10px;
+}
+
+.spaceImg {
+    display: inline-table;
+    width: 100px;
+    height: 178px;
+    line-height: 178px;
+    padding: 89px 0 89px 0;
+    margin: 10px 10px;
+}
+
+.imageWrap i {
+    position: relative;
+    margin-left: 45px;
+}
+
+.imageWrapSpiner,
+.imageWrap {
+    display: inline-table;
+}
+
+.title {
+    width: 100px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.userFlorWrap {
+    padding: 10px 15px;
+    background: white;
+    border-radius: 5px;
+    margin: 15px 5px;
+    margin: 5px 0;
+}
+
+#mapContainer {
+    /*margin: 0px -100px 0 -100px;*/
+    /*width: 110%;*/
+    /*margin-left: -10%;*/
+}
+
+#mapContainer .row {
+    /*width: calc(100% + 200px);*/
+    /*height: 289px;*/
+}
+
+.userFlorWrap h5 {
+    font-family: "Sofia Pro";
+    font-weight: 500;
+}
+
+.userFlorWrap h6 {
+    font-size: 16px;
+    margin: 5px 20px 0px 0px;
+}
+
+.workFlowName {
+    font-family: "Sofia Pro";
+    font-weight: 500;
+    font-size: 22px;
+    font-style: italic;
+    color: #4f4444;
+}
+
+.stepDetailWrap {
+    margin-left: 0;
+    margin-right:;: - 30 %;
+    opacity: 0;
+}
+
+#pageResult {
+    margin: 20px auto 50px;
+    background: #ededed;
+}
+
+#pageResult h6 {
+    display: inline;
+    font-size: 18px;
+    font-family: SofiaProRegular !important;
+}
+
+#pageResult .itemList div {
+    margin: 8px auto;
+}
+
+#resultCrawler .row {
+    width: calc(100%);
+    /*height: 289px;*/
+}
+
+#resultCrawler #mapContainer {
+    margin: 0;
+}
+
+.iconfortest {
+    display: inline-block;
+    font-size: 18px;
+    width: 32px;
+}
+
+.statusDecoration.passed {
+    color: rgba(139, 195, 74, 0.5);
+}
+
+.passed {
+    color: rgba(139, 195, 74, 0.5);
+}
+
+.statusDecoration.failed {
+    color: #b01510;
+}
+
+.statusDecoration.passed h6 {
+    /*text-decoration: line-through;*/
+    color: rgba(139, 195, 74, 0.88);
+}
+
+.passed h6 {
+    /*text-decoration: line-through;*/
+    /*color: rgba(139, 195, 74, 0.88);*/
+}
+
+.contentWrapper {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.fixedPos {
+    position: fixed;
+    width: 500px;
+    margin-left: -100px;
+    margin-top: -180px;
+    top: 0px;
+    height: 1px;
+}
+
+#mapContainer h5,
+.categoryDetectionText,
+.screenQAText,
+.TitleQATest,
+.testQAText {
+    color: #4f4444;
+    font-size: 26px;
+    line-height: 50px;
+    font-family: SofiaProRegular;
+}
+
+#tr3 {
+    width: 200px;
+    text-align: center;
+}
+
+.faded {
+    opacity: 0.5;
+}
+
+.paddingLeft30 {
+    padding-left: 30px;
+}
+
+.QATestCard .assert.passed {
+    min-height: 40px;
+    background: #313131;
+    background: #485a4a;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 5px 35% 5px 20px;
+    font-family: SofiaProRegular;
+
+    /*light version*/
+    background: #dff0d8;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 5px 35% 5px 20px;
+    font-family: SofiaProRegular;
+    color: rgba(139, 195, 74, 0.5);
+    color: rgb(74, 138, 0);
+
+    /*light Version 2*/
+    /*background: #8ad26c;*/
+    /*color: rgb(255, 255, 255) !important;*/
+}
+
+.QATestCard .assert.faded {
+    /*light version*/
+    background: rgba(245, 245, 245, 0.6);
+    color: rgba(0, 0, 0, 0.6);
+    padding: 6px;
+    border-radius: 8px;
+    margin: 5px 35% 5px 20px;
+    font-family: SofiaProRegular;
+}
+
+.QATestCard .assert,
+.QATestCard .process {
+    background: #313131;
+    border-radius: 8px;
+    margin: 5px 35% 5px 20px;
+    font-family: SofiaProRegular;
+
+    /*light version*/
+    background: #f5f5f5;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 5px 35% 5px 20px;
+    font-family: SofiaProRegular;
+}
+
+.QATestCard .assert.failed {
+    min-height: 40px;
+    color: #ff696a;
+    background: #6b3939;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 5px 35% 5px 20px;
+    font-family: SofiaProRegular;
+
+    /*light version*/
+    color: #ff696a;
+    color: #940001;
+    background: #f2dede;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 5px 35% 5px 20px;
+    font-family: SofiaProRegular;
+
+    /*light version 2*/
+    /*color: white;*/
+    /*background: #ef6465;*/
+}
+
+.QATestCard .failed .reason {
+    display: block;
+    color: #aba5a5;
+    font-size: 11px;
+    font-family: SofiaProRegular;
+    line-height: 8px;
+    padding-left: 33px;
+    padding-bottom: 3px;
+
+    /*light version*/
+    display: block;
+    color: #6b6b6b;
+    font-size: 11px;
+    font-family: SofiaProRegular;
+    line-height: 8px;
+    padding-left: 33px;
+    padding-bottom: 3px;
+
+    /*light version 2*/
+    /*color: #ffd3d3;*/
+}
+
+.QATestCard {
+    /*background: #383838;*/
+    /*color: #efefef;*/
+    /*border-top: 1px solid #636363;*/
+    /*box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);*/
+
+    border-top: 1px solid #e6e6e6;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    padding: 25px 20px 35px;
+    font-family: SofiaProRegular;
+}
+
+.QATestCard .TitleQATest {
+    /*color: #fefefe;*/
+}
+
+.qastepsWrap div {
+    line-height: 28px;
+    min-height: 28px;
+}
+
+.iconforqa .fa.none {
+    opacity: 0;
+    display: inline-block;
+    width: 0;
+    margin-left: -10px;
+}
+
+.screenDetectionWindow div.col-sm-4 {
+    line-height: 28px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: SofiaProSoftLight;
+}
+
+.deviceTitle {
+    background: white;
+    position: relative;
+    border-radius: 8px;
+    width: 250px;
+    margin: 200px auto -100px;
+    padding: 10px 10px;
+}
+
+.deviceTitle p {
+    font-size: 12px;
+}
+
+.screenDetectionItem {
+    opacity: 0.0;
+}
+
+#page-container {
+    margin-bottom: 300px;
+}

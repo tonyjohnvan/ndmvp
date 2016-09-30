@@ -1,0 +1,647 @@
+<html class="gr__test05_nimbledroid_com">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=10,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>NimbleDroid | Automated, Comprehensive Performance Analysis for Every Build of Your App</title>
+  <link href="assets/css/style.css" media="all" rel="stylesheet">
+  <link href="assets/css/demo.css" media="all" rel="stylesheet">
+  <link rel="stylesheet" href="assets/jquery.mobile/jquery.mobile-1.4.5.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+  <![endif]-->
+  <script src="assets/js/jquery-3.1.0.min.js"></script>
+  <style type="text/css">
+    .jqstooltip {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      visibility: hidden;
+      background: transparent;
+      background-color: rgba(0, 0, 0, 0.6);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+      color: white;
+      font: 10px arial, san serif;
+      text-align: left;
+      white-space: nowrap;
+      padding: 5px;
+      border: 1px solid white;
+      z-index: 10000;
+    }
+
+    .jqsfield {
+      color: white;
+      font: 10px arial, san serif;
+      text-align: left;
+    }
+  </style>
+</head>
+<body data-gr-c-s-loaded="true">
+<div id="page-container">
+  <div class="nocontent" id="banner-and-sidebar">
+    <nav class="navbar navbar-inverse">
+      <div class="container no-gutter">
+        <div class="navbar-header col-xs-10 col-sm-1">
+          <a class="navbar-brand nav-normal" href="/my_apps">
+            <img alt="NimbleDroid" height="37" src="assets/logo3.png">
+          </a>
+        </div>
+        <div class="navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right nav-normal">
+            <li class="hidden-xs"><a class="btn btn-white upload-btn" href="/upload_apk" id="upload-apk"
+                                     rel="nofollow">Upload APK</a></li>
+            <li class="hidden-xs"><a href="/play">Play Apps</a></li>
+            <li class="hidden-xs"><a href="/my_apps">My Apps</a></li>
+            <li class="hidden-xs"><a class="user-sign-out-link" data-method="delete" href="/users/sign_out"
+                                     rel="nofollow">Sign out</a></li>
+            <li class="hidden-xs"><a href="/my_apps"><i class="fa fa-search"></i><span
+              class="nd-red">.</span></a></li>
+            <li class="hidden-xs">
+              <a href="#" id="sidebar-toggle">
+                <i class="fa fa-bars"></i><span class="nd-red">.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="sidebar">
+      <div class="top-sec">
+        <ul class="visible-xs-block">
+          <li>
+            <a class="user-sign-out-link" data-method="delete" href="/users/sign_out" rel="nofollow">Sign
+              out</a>
+          </li>
+        </ul>
+        <a class="sidebar-close" href="#">
+          <i class="fa fa-close"></i>
+        </a>
+      </div>
+      <ul>
+        <li class="visible-xs-block">
+          <form accept-charset="UTF-8" action="/play/search" class="nd-search-box" method="get">
+            <div style="display:none"></div>
+            <div class="input-group">
+              <input class="form-control nd-search-input" id="q" name="q"
+                     placeholder="Search for your Google Play app" type="text">
+              <span class="input-group-btn nd-search-btn">
+                    <button class="btn btn-default" type="submit">
+                    <i class="fa fa-search"></i>
+                    </button>
+                    </span>
+            </div>
+          </form>
+        </li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/my_apps">My Apps</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a class="account-link" href="/account" rel="nofollow">Account</a></li>
+        <li><a href="/help">Help</a></li>
+        <li><a href="http://blog.nimbledroid.com">Blog</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/jobs">Jobs</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div id="flash"></div>
+  </div>
+
+  <div class="container mainContent">
+    <div class="card">
+      <div class="app-profiling-status col-xs-12 col-sm-8 col-sm-offset-2 center">Testing your app...
+        <i class="fa fa-refresh fa-spin"></i></div>
+    </div>
+    <div class="row">
+      <div class="col-md-5 text-center fixedPos">
+        <div class="deviceTitle">
+          <h5>NimbleDroid Auto QA</h5>
+          <p>All tests auto-generated and maintained automatically</p>
+        </div>
+        <div class="androidBG">
+          <div class="screens"></div>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-4 contentWrapper">
+        <div class="roundContainer text-center catalogCard">
+          <span class="categoryDetectionText"><i class="fa fa-refresh fa-spin"></i>Categorizing App</span>
+          <h3 class="text-center categoryTitle" id="GATitle">General App</h3>
+          <h3 class="text-center categoryTitle" id="ECTitle">ECommerce</h3>
+          <h3 class="text-center categoryTitle" id="CNN">Content / News</h3>
+        </div>
+
+        <div class="roundContainer screenDetectionCard" id="screenDetectionCard">
+          <div class="text-center">
+            <span class="screenQAText"><i class="fa fa-refresh fa-spin"></i>Identifying Pages</span>
+          </div>
+          <div class="screenDetectionWindow">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="screenDetectionItem"><span class="iconforscreen1"><i
+                  class="fa fa-refresh fa-spin"></i></span> <h6>Product Search
+                  Box</h6></div>
+                <div class="screenDetectionItem"><span class="iconforscreen2"><i
+                  class="fa fa-refresh fa-spin"></i></span> <h6>Product Search
+                  Results</h6></div>
+                <div class="screenDetectionItem"><span class="iconforscreen3"><i
+                  class="fa fa-refresh fa-spin"></i></span> <h6>Product List</h6>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="screenDetectionItem"><span class="iconforscreen4"><i
+                  class="fa fa-refresh fa-spin"></i></span> <h6>Product Page</h6>
+                </div>
+                <div class="screenDetectionItem"><span class="iconforscreen5"><i
+                  class="fa fa-refresh fa-spin"></i></span> <h6>Shopping Cart</h6>
+                </div>
+                <div class="screenDetectionItem"><span class="iconforscreen6"><i
+                  class="fa fa-refresh fa-spin"></i></span> <h6>Checkout</h6></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="screenDetectionItem"><span class="iconforscreen7"><i
+                  class="fa fa-refresh fa-spin"></i></span> <h6>Payment</h6></div>
+                <div class="screenDetectionItem"><span class="iconforscreen8"><i
+                  class="fa fa-refresh fa-spin"></i></span> <h6>Gallery</h6></div>
+                <div class="screenDetectionItem"><span class="iconforscreen9"><i
+                  class="fa fa-refresh fa-spin"></i></span> <h6>Checkout</h6></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="roundContainer flowDetectionCard" id="mapContainer">
+
+          <div class="text-center">
+            <h5 id="userFlowTitle"><i class="fa fa-refresh fa-spin"></i>Identifying User Flows</h5>
+          </div>
+
+          <div class="row userFlorWrap" id="tr1">
+            <h6><span class="workFlowName">Search for Product</span></h6>
+            <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap"/>
+              <div class="title">Home</div>
+            </div>
+            <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap"/>
+              <div class="title">List</div>
+            </div>
+            <div class="imageWrapSpiner"><i class="fa fa-refresh fa-spin"></i></div>
+          </div>
+
+          <div class="row userFlorWrap" id="tr2">
+            <h6><span class="workFlowName">Add to Shopping Cart</span></h6>
+            <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap"/>
+              <div class="title">Home</div>
+            </div>
+            <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap"/>
+              <div class="title">List</div>
+            </div>
+            <div class="imageWrap"><img src="img/app/Ecommerce_03.jpg" class="screenMap"/>
+              <div class="title">ScreenX</div>
+            </div>
+            <div class="imageWrap"><img src="img/app/Ecommerce_04.jpg" class="screenMap"/>
+              <div class="title">ScreenY</div>
+            </div>
+            <div class="imageWrap"><img src="img/app/Ecommerce_05.jpg" class="screenMap"/>
+              <div class="title">ScreenZ</div>
+            </div>
+            <div class="imageWrapSpiner"><i class="fa fa-refresh fa-spin"></i></div>
+          </div>
+
+          <div class="row userFlorWrap" id="">
+            <h6> and <a href="">134 more flows</a></h6>
+          </div>
+
+        </div>
+
+        <div class="roundContainer QATestCard" id="QATestCard">
+          <div class="text-center">
+            <span class="TitleQATest "><i class="fa fa-refresh fa-spin"></i> QA Test - Add Product to Shopping Cart then Remove It</span>
+          </div>
+          <div class="">
+            <div class="row">
+              <div class="col-sm-11 paddingLeft30 qastepsWrap">
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Open app</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click on product image</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click on Add to Cart button</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click on Shopping Cart icon</h6></div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product name matches product that was
+                  added</h6></div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>Quantity is 1</h6>
+                </div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>Subtotal amount matches item price</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click on Remove button for item</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click on Confirm</h6></div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>Item is gone from cart</h6><span
+                  class="hide reason">Item is in cart</span></div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>Subtotal is $0</h6><span class="hide reason">Subtotal is 69.90</span>
+                </div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click on Home icon</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click on Shopping Cart icon</h6></div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>Item is still gone from cart</h6><span
+                  class="hide reason">Item is in cart</span></div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>Subtotal is still $0</h6><span
+                  class="hide reason">Subtotal is 69.90</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="roundContainer QATestCard" id="QATestCard2">
+          <div class="text-center">
+            <span class="TitleQATest "><i class="fa fa-refresh fa-spin"></i> QA Test - Enter an invalid Credit Card when checking out</span>
+          </div>
+          <div class="">
+            <div class="row">
+              <div class="col-sm-11 paddingLeft30 qastepsWrap">
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click Checkout button</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click "Use Existing Shipping Address"</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click "Billing Address is same as Shipping"</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click "Next" button</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click on "Add New Card" radio button</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Enter "Card Number" "1234223432344234"</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Enter "Expiration Date" "07/2021"</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Enter "CCV" "455"</h6></div>
+                <div class="normal faded "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6>Click "Save"</h6></div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>Error messsage appears</h6></div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>"Card Number" field is highlighted</h6></div>
+                <div class="assert faded "><span class="iconforqa"><i
+                  class="fa fa-refresh fa-spin invisible"></i></span> <h6>Cursor is placed in "Card Number" field</h6></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="roundContainer QATestCard" id="QATestCard3">
+          <div class="">
+            <div class="row">
+              <div class="col-sm-11 paddingLeft30 qastepsWrap">
+                <div class="normal "><span class="iconforqa"><i class="fa fa-refresh fa-spin none"></i></span>
+                  <h6> and <a href="">249 more tests</a></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container no-gutter pageResultCard" id="pageResult">
+    <div class="page-header">
+      <h2 class="center">Profile Results</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4 class="text-center">Failed & Undetectable Cases</h4>
+          <div class="roundContainer no-margin-side">
+            <div class="row itemList">
+              <div class="statusDecoration failed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div>
+                <div class="col-xs-10"><h6>Shopping Cart Remove item</h6></div>
+              </div>
+              <div class="statusDecoration failed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div>
+                <div class="col-xs-10"><h6>Shopping Cart Checkout</h6></div>
+              </div>
+              <div class="statusDecoration failed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div>
+                <div class="col-xs-10"><h6>Checkout Payment</h6></div>
+              </div>
+              <div class="statusDecoration failed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div>
+                <div class="col-xs-10"><h6>Checkout BIlling Address</h6></div>
+              </div>
+              <div class="statusDecoration failed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div>
+                <div class="col-xs-10"><h6>Checkout Shipping Address</h6></div>
+              </div>
+              <div class="statusDecoration natura">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div>
+                <div class="col-xs-10"><h6>Product Page Description</h6></div>
+              </div>
+              <div class="statusDecoration natura">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div>
+                <div class="col-xs-10"><h6>Product Page Related Products</h6></div>
+              </div>
+              <div class="statusDecoration natura">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div>
+                <div class="col-xs-10"><h6>Shopping Cart Display items</h6></div>
+              </div>
+              <div class="statusDecoration natura">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div>
+                <div class="col-xs-10"><h6>Shopping Cart Update quantity</h6></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h4 class="text-center">Passed QA Test Cases</h4>
+          <div class="roundContainer no-margin-side">
+            <div class="row itemList">
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Autocomplete Search box</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Filter Search Results</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Sort Search Results</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Product List Check List details</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Product List Check Paging</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Product List Check Add to Cart</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Product Page Add to Cart</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Product Page Review List</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Product Page Description</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Product Page Related Products</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Shopping Cart Display items</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Shopping Cart Update quantity</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div>
+                <div class="col-xs-10"><h6>Product Page Gallery</h6></div>
+              </div>
+              <div class="statusDecoration passed">
+                <div class="col-xs-10"><h6>and 216 more…</h6></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 text-center">
+          <a href="#" class="btn btn-nd nextPageBtn" onclick="location.reload();">Rerun</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer class="footer nocontent">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 center">
+        <img alt="NimbleDroid" height="37" src="assets/logo-red.png">
+      </div>
+      <div class="col-xs-12 col-sm-8 text-right">
+        <ul class="list-inline">
+          <li><a href="/">Home</a></li>
+          <li><a href="/play">Play Apps</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a class="account-link" href="/account">Account</a></li>
+          <li><a href="/help">Help</a></li>
+          <li><a href="http://blog.nimbledroid.com">Blog</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/jobs">Jobs</a></li>
+          <li><a href="/privacy">Privacy &amp; Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        <p>588 Broadway, Suite 503</p>
+        <p>New York, NY 10012</p>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <p>© NimbleDroid 2015</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/index.js"></script>
+<script>
+  $('.screenDetectionCard').hide()
+  $('.flowDetectionCard').hide()
+  $('.pageResultCard').hide()
+  $('.QATestCard').hide()
+  $('.categoryTitle').hide()
+  $('.imageWrap').hide()
+  $('.userFlorWrap').hide()
+
+
+  $(document).ready(function () {
+    checkScroll();
+    $(window).on('scroll', checkScroll)
+    changeCategoryText(1);
+    var iterval1 = setInterval(function () {
+      changeCategoryText(Math.floor(Math.random() * 10 % 3 + 1))
+    }, 2000);
+
+    setTimeout(function () {
+      clearInterval(iterval1)
+      setTimeout(function () {
+        changeCategoryText(2)
+        $('.categoryDetectionText').html('<i class="fa fa-check"></i> App Category')
+        setTimeout(function () {
+          $('.screenDetectionCard').fadeIn()
+          scrollAnimateTo('.screenDetectionCard')
+          screenRun2()
+        }, 500)
+      }, 500)
+    }, 1000)
+  })
+
+  function checkScroll() {
+    var offset = $(window).scrollTop()
+    var off = ($('#pageResult').offset().top == 0 ? $('footer').offset().top : $('#pageResult').offset().top) - 666 - 90 + 120
+    if (offset >= off) {
+      $('.fixedPos').css({ 'top': 0 - (offset - off ) + 'px' })
+    } else if(offset < 103){
+      $('.fixedPos').css({ 'top': 103 - (offset) })
+    } else {
+      $('.fixedPos').css({ 'top': '0px' })
+    }
+  }
+
+  function screenRun2() {
+    var testCaseSC = 1
+    var totalLength = $('.screenDetectionWindow h6').length
+    gotoScreen(testCaseSC++)
+    var itervalScreen = setInterval(function () {
+      if (testCaseSC < totalLength + 1) {
+        gotoScreen(testCaseSC++)
+      } else {
+        // finished all stuff...
+        clearInterval(itervalScreen);
+        $('.iconforscreen' + totalLength + ' .fa').removeClass('fa-spin').removeClass('fa-refresh').addClass('fa-check');
+        $('.screenQAText').html('<i class="fa fa-check"></i>Pages Identified')
+        $('.flowDetectionCard').fadeIn()
+        scrollAnimateTo('.flowDetectionCard')
+        runUserFlow(0)
+      }
+    }, 600);
+  }
+
+  function runUserFlow(num) {
+    if (num < 2) {
+      var target = $('.userFlorWrap')[num]
+      $(target).fadeIn()
+      var iterFlowScreens = 0
+      var screens = $(target).children('.imageWrap')
+      var flowInterval = setInterval(function () {
+        if (iterFlowScreens < screens.length) {
+          $($(target).children('.imageWrap')[iterFlowScreens++]).fadeIn()
+        } else {
+          clearInterval(flowInterval)
+          $(target).children('.imageWrap')
+          $(target).find('.fa').removeClass('fa-refresh').removeClass('fa-spin').addClass('fa-check')
+          runUserFlow(++num);
+        }
+      }, 500)
+    } else if (num == 2) {
+      var target = $('.userFlorWrap')[num]
+      $(target).fadeIn()
+      var iterTotal = 1;
+      var flowIntervalNumber = setInterval(function () {
+        if (iterTotal < 18) {
+          $($('.userFlorWrap')[2]).find('a').html(iterTotal++ + ' more flows')
+        } else {
+          clearInterval(flowIntervalNumber)
+          $('#userFlowTitle').html('<i class="fa fa-check"></i>Identified User Flows')
+          $('#QATestCard').fadeIn()
+          scrollAnimateTo('#QATestCard')
+          detailedQATest(0, 400)
+        }
+      }, 100)
+    } else {
+      // NOTHING...
+    }
+  }
+
+  var cardNum = 1;
+  function detailedQATest(num, sec) {
+    var length
+    if (cardNum == 2) {
+      length = $($('#QATestCard2').find('.qastepsWrap')).children().length - 1;
+    } else {
+      length = $($('#QATestCard').find('.qastepsWrap')).children().length - 1;
+    }
+    if (num > length) {
+      if (cardNum == 1) {
+        cardNum = 2;
+        $('#QATestCard2').fadeIn()
+        scrollAnimateTo('#QATestCard2')
+        detailedQATest(0, 400)
+        $('#QATestCard .fa').removeClass('fa-spin').removeClass('fa-refresh').addClass('fa-times')
+      } else {
+        setTimeout(function () {
+          $('#QATestCard2 .fa').removeClass('fa-spin').removeClass('fa-refresh').addClass('fa-check')
+          $('.pageResultCard').fadeIn()
+          scrollAnimateTo('.pageResultCard');
+          $('.app-profiling-status').html('<i class="fa fa-check"></i>Your app finished testing.')
+          $('#QATestCard3').fadeIn()
+          $('html, body').animate({
+            scrollTop: $('#QATestCard3').offset().top
+          }, 600);
+        }, 1000)
+      }
+      return;
+    }
+
+    if (num == 0)changeImage(-1,cardNum);
+    var target
+    if (cardNum == 2) {
+      target = $($($('#QATestCard2').find('.qastepsWrap')).children()[num]);
+    } else {
+      target = $($($('#QATestCard').find('.qastepsWrap')).children()[num]);
+    }
+    var icon = target.find('i');
+    var time = sec ? 400 : sec;
+    changeImage(num,cardNum)
+    if (target.hasClass('normal')) {
+      target.removeClass('faded')
+      setTimeout(function () {
+        detailedQATest(num + 1, 400)
+      }, 400)
+    } else {
+      target.removeClass('faded')
+        .addClass('process')
+      icon.removeClass('invisible')
+      setTimeout(function () {
+        if (target.find('.reason').length > 0) {
+          target.addClass('failed')
+          icon
+            .removeClass('fa-refresh')
+            .removeClass('fa-spin')
+            .addClass('fa-times')
+          target.find('.reason').hide().removeClass('hide').fadeIn()
+        } else {
+          target.addClass('passed')
+          icon
+            .removeClass('fa-refresh')
+            .removeClass('fa-spin')
+            .addClass('fa-check')
+        }
+        setTimeout(function () {
+          detailedQATest(num + 1, 400)
+        }, 400)
+      }, time)
+    }
+  }
+
+  function scrollAnimateTo(target) {
+    $('html, body').animate({
+      scrollTop: $(target).offset().top
+    }, 1600);
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<html class="gr__test05_nimbledroid_com">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=10,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>NimbleDroid | Automated, Comprehensive Performance Analysis for Every Build of Your App</title>
+    <link href="assets/css/style.css" media="all" rel="stylesheet">
+    <link href="assets/css/demo.css" media="all" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: transparent;
+            background-color: rgba(0, 0, 0, 0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+</head>
+<body data-gr-c-s-loaded="true">
+<div id="page-container">
+    <div class="nocontent" id="banner-and-sidebar">
+        <nav class="navbar navbar-inverse">
+            <div class="container no-gutter">
+                <div class="navbar-header col-xs-10 col-sm-1">
+                    <a class="navbar-brand nav-normal" href="/my_apps">
+                        <img alt="NimbleDroid" height="37" src="assets/logo3.png">
+                    </a>
+                </div>
+                <div class="navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right nav-normal">
+                        <li class="hidden-xs"><a class="btn btn-white upload-btn" href="/upload_apk" id="upload-apk"
+                                                 rel="nofollow">Upload APK</a></li>
+                        <li class="hidden-xs"><a href="/play">Play Apps</a></li>
+                        <li class="hidden-xs"><a href="/my_apps">My Apps</a></li>
+                        <li class="hidden-xs"><a class="user-sign-out-link" data-method="delete" href="/users/sign_out"
+                                                 rel="nofollow">Sign out</a></li>
+                        <li class="hidden-xs"><a href="/my_apps"><i class="fa fa-search"></i><span
+                                class="nd-red">.</span></a></li>
+                        <li class="hidden-xs">
+                            <a href="#" id="sidebar-toggle">
+                                <i class="fa fa-bars"></i><span class="nd-red">.</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="sidebar">
+            <div class="top-sec">
+                <ul class="visible-xs-block">
+                    <li>
+                        <a class="user-sign-out-link" data-method="delete" href="/users/sign_out" rel="nofollow">Sign
+                            out</a>
+                    </li>
+                </ul>
+                <a class="sidebar-close" href="#">
+                    <i class="fa fa-close"></i>
+                </a>
+            </div>
+            <ul>
+                <li class="visible-xs-block">
+                    <form accept-charset="UTF-8" action="/play/search" class="nd-search-box" method="get">
+                        <div style="display:none"></div>
+                        <div class="input-group">
+                            <input class="form-control nd-search-input" id="q" name="q"
+                                   placeholder="Search for your Google Play app" type="text">
+                            <span class="input-group-btn nd-search-btn">
+                  <button class="btn btn-default" type="submit">
+                  <i class="fa fa-search"></i>
+                  </button>
+                  </span>
+                        </div>
+                    </form>
+                </li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/my_apps">My Apps</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a class="account-link" href="/account" rel="nofollow">Account</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="http://blog.nimbledroid.com">Blog</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/jobs">Jobs</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="flash"></div>
+    </div>
+
+    <div class="container mainContent">
+        <div class="card">
+            <div class="app-profiling-status col-xs-12 col-sm-8 col-sm-offset-2 center">Your app is being profiling...
+                <i class="fa fa-refresh fa-spin"></i></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="ndBotLeftBig css_blink float"></div>
+
+                <div class="roundContainer stepDetailWrap">
+                    <div class="text-center">
+                        <span class="QASteps">Running AI Predefined Tests Detail...</span>
+                    </div>
+                    <div class="QAStepsDetail">
+                        Login to the system
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="androidBG">
+                    <div class="screens"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="ndBotRightSmall"></div>
+                <div class="roundContainer text-center catalogCard">
+                    <span class="categoryDetectionText">Detecting App's category...<i class="fa fa-refresh fa-spin"></i></span>
+                    <h3 class="text-center categoryTitle" style="display: none" id="GATitle">General App</h3>
+                    <h3 class="text-center categoryTitle" style="display: none" id="ECTitle">Ecommerce</h3>
+                    <h3 class="text-center categoryTitle" style="display: none" id="CNN">Content / News</h3>
+                </div>
+
+                <div class="roundContainer screenDetectionCard">
+                    <div class="text-center">
+                        <span class="screenQAText ">Detecting Screen Elements...</span>
+                    </div>
+                    <div class="screenDetectionWindow">
+                        <div><span class="iconforscreen1"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Search Box Screen</h6></div>
+                        <div><span class="iconforscreen2"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Search Results Screen</h6></div>
+                        <div><span class="iconforscreen3"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product List Screen</h6></div>
+                        <!--<div><span class="iconforscreen4"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Screen</h6></div>-->
+                        <!--<div><span class="iconforscreen5"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Shopping Cart Screen</h6></div>-->
+                        <!--<div><span class="iconforscreen6"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Checkout Screen</h6></div>-->
+                        <!--<div><span class="iconforscreen7"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Payment Screen</h6></div>-->
+                        <!--<div><span class="iconforscreen8"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Gallery Screen</h6></div>-->
+                        <!--<div><span class="iconforscreen9"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Checkout Screen</h6></div>-->
+                    </div>
+                    <div class="windowCover" onclick="jumpToMap()"></div>
+                </div>
+
+                <div class="roundContainer detailedTestCaseCard">
+                    <div class="text-center">
+                        <span class="testQAText ">Running AI Predefined Tests...</span>
+                    </div>
+                    <div class="testMessageWindow">
+                        <div><span class="iconfortest1"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Search for Product</h6></div>
+                        <div><span class="iconfortest2"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Add Item to Shopping Cart</h6></div>
+                        <div><span class="iconfortest3"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Sort Search Results</h6></div>
+                        <!--<div><span class="iconfortest4"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product List Check List details</h6></div>-->
+                        <!--<div><span class="iconfortest5"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product List Check Paging</h6></div>-->
+                        <!--<div><span class="iconfortest6"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product List Check Add to Cart</h6></div>-->
+                        <!--<div><span class="iconfortest7"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Add to Cart</h6></div>-->
+                        <!--<div><span class="iconfortest8"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Review List</h6></div>-->
+                        <!--<div><span class="iconfortest9"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Price</h6></div>-->
+                        <!--<div><span class="iconfortest10"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Leave a Review</h6></div>-->
+                        <!--<div><span class="iconfortest11"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Size/Variety Selection</h6></div>-->
+                        <!--<div><span class="iconfortest12"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Quantity selection</h6></div>-->
+                        <!--<div><span class="iconfortest13"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Gallery</h6></div>-->
+                        <!--<div><span class="iconfortest14"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Description</h6></div>-->
+                        <!--<div><span class="iconfortest15"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Product Page Related Products</h6></div>-->
+                        <!--<div><span class="iconfortest16"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Shopping Cart Display items</h6></div>-->
+                        <!--<div><span class="iconfortest17"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Shopping Cart Update quantity</h6></div>-->
+                        <!--<div><span class="iconfortest18"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Shopping Cart Remove item</h6></div>-->
+                        <!--<div><span class="iconfortest19"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Shopping Cart Checkout</h6></div>-->
+                        <!--<div><span class="iconfortest20"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Checkout Payment</h6></div>-->
+                        <!--<div><span class="iconfortest21"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Checkout BIlling Address</h6></div>-->
+                        <!--<div><span class="iconfortest22"><i class="fa fa-refresh fa-spin invisible"></i></span> <h6>Checkout Shipping Address</h6></div>-->
+                    </div>
+                    <div class="windowCover"></div>
+                </div>
+                <a href="step3.html" class="btn btn-nd nextPageBtn">View Profiled Results!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer nocontent">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 center">
+                <img alt="NimbleDroid" height="37" src="assets/logo-red.png">
+            </div>
+            <div class="col-xs-12 col-sm-8 text-right">
+                <ul class="list-inline">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/play">Play Apps</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a class="account-link" href="/account">Account</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <li><a href="http://blog.nimbledroid.com">Blog</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><a href="/privacy">Privacy &amp; Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <p>588 Broadway, Suite 503</p>
+                <p>New York, NY 10012</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <p>© NimbleDroid 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/index.js"></script>
+<script>
+    $(function () {
+        changeCategoryText(1);
+        var iterval1 = setInterval(function () {
+            changeCategoryText(Math.floor(Math.random() * 10 % 3 + 1))
+        }, 2000);
+
+        setTimeout(function () {
+            clearInterval(iterval1);
+            setTimeout(function () {
+                finishesCatagoryDetection()
+            }, 1000)
+        }, 2000)
+
+    })
+
+    function finishesCatagoryDetection() {
+        changeCategoryText(2);
+        $('.categoryDetectionText').html('<i class="fa fa-check"></i> App\'s category is detected as')
+
+        $('.ndBotRightSmall').fadeOut(500);
+        $('.catalogCard').animate({ 'margin-top': '-190px' }, 500, function () {
+            $('.catalogCard').css({ 'margin-top': '30px' });
+            setTimeout(function () {
+                $('.screenDetectionCard').animate({'opacity':'1.0'},500)
+                screenRun();
+            },1000)
+        })
+    }
+</script>
+</body>
+</html>

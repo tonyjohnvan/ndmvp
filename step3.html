@@ -1,0 +1,265 @@
+<html class="">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=10,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>NimbleDroid | Automated, Comprehensive Performance Analysis for Every Build of Your App</title>
+    <link href="assets/css/style.css" media="all" rel="stylesheet">
+    <link href="assets/css/demo.css" media="all" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <style type="text/css">
+    </style>
+</head>
+<body data-gr-c-s-loaded="true">
+<div id="page-container">
+    <div class="nocontent" id="banner-and-sidebar">
+        <nav class="navbar navbar-inverse">
+            <div class="container no-gutter">
+                <div class="navbar-header col-xs-10 col-sm-1">
+                    <a class="navbar-brand nav-normal" href="/my_apps">
+                        <img alt="NimbleDroid" height="37" src="assets/logo3.png">
+                    </a>
+                </div>
+                <div class="navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right nav-normal">
+                        <li class="hidden-xs"><a class="btn btn-white upload-btn" href="/upload_apk" id="upload-apk"
+                                                 rel="nofollow">Upload APK</a></li>
+                        <li class="hidden-xs"><a href="/play">Play Apps</a></li>
+                        <li class="hidden-xs"><a href="/my_apps">My Apps</a></li>
+                        <li class="hidden-xs"><a class="user-sign-out-link" data-method="delete" href="/users/sign_out"
+                                                 rel="nofollow">Sign out</a></li>
+                        <li class="hidden-xs"><a href="/my_apps"><i class="fa fa-search"></i><span
+                                class="nd-red">.</span></a></li>
+                        <li class="hidden-xs">
+                            <a href="#" id="sidebar-toggle">
+                                <i class="fa fa-bars"></i><span class="nd-red">.</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="sidebar">
+            <div class="top-sec">
+                <ul class="visible-xs-block">
+                    <li>
+                        <a class="user-sign-out-link" data-method="delete" href="/users/sign_out" rel="nofollow">Sign
+                            out</a>
+                    </li>
+                </ul>
+                <a class="sidebar-close" href="#">
+                    <i class="fa fa-close"></i>
+                </a>
+            </div>
+            <ul>
+                <li class="visible-xs-block">
+                    <form accept-charset="UTF-8" action="/play/search" class="nd-search-box" method="get">
+                        <div style="display:none"></div>
+                        <div class="input-group">
+                            <input class="form-control nd-search-input" id="q" name="q"
+                                   placeholder="Search for your Google Play app" type="text">
+                            <span class="input-group-btn nd-search-btn">
+                  <button class="btn btn-default" type="submit">
+                  <i class="fa fa-search"></i>
+                  </button>
+                  </span>
+                        </div>
+                    </form>
+                </li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/my_apps">My Apps</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a class="account-link" href="/account" rel="nofollow">Account</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="http://blog.nimbledroid.com">Blog</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/jobs">Jobs</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="flash"></div>
+    </div>
+    <div class="container no-gutter" id="pageResult">
+        <div class="page-header">
+            <h2 class="center">Profile Results</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="text-center">Screen Detection</h4>
+                    <div class="roundContainer no-margin-side">
+                        <div class="row itemList">
+                            <div class="statusDecoration failed"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div> <div class="col-xs-9"><h6>Blog Screen</h6></div></div>
+                            <div class="statusDecoration failed"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div> <div class="col-xs-9"><h6>Photo Upload Screen</h6></div></div>
+                            <div class="statusDecoration natura"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div> <div class="col-xs-9"><h6>Contact Screen</h6></div></div>
+                            <div class="statusDecoration natura"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div> <div class="col-xs-9"><h6>Settings Screen</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-9"><h6>Login Screen</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-9"><h6>Register Screen</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-9"><h6>List Screen</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-9"><h6>Shopping Cart Screen</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-9"><h6>Item Detail Screen</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-9"><h6>Reviews Screen</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-3 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-9"><h6>Comment Screen</h6></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-center">Failed & Undetectable Cases</h4>
+                    <div class="roundContainer no-margin-side">
+                        <div class="row itemList">
+                            <div class="statusDecoration failed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div> <div class="col-xs-10"><h6>Shopping Cart Remove item</h6></div></div>
+                            <div class="statusDecoration failed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div> <div class="col-xs-10"><h6>Shopping Cart Checkout</h6></div></div>
+                            <div class="statusDecoration failed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div> <div class="col-xs-10"><h6>Checkout Payment</h6></div></div>
+                            <div class="statusDecoration failed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div> <div class="col-xs-10"><h6>Checkout BIlling Address</h6></div></div>
+                            <div class="statusDecoration failed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-times"></i></span></div> <div class="col-xs-10"><h6>Checkout Shipping Address</h6></div></div>
+                            <div class="statusDecoration natura"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div> <div class="col-xs-10"><h6>Product Page Description</h6></div></div>
+                            <div class="statusDecoration natura"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div> <div class="col-xs-10"><h6>Product Page Related Products</h6></div></div>
+                            <div class="statusDecoration natura"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div> <div class="col-xs-10"><h6>Shopping Cart Display items</h6></div></div>
+                            <div class="statusDecoration natura"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-minus"></i></span></div> <div class="col-xs-10"><h6>Shopping Cart Update quantity</h6></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-center">Passed QA Test Cases</h4>
+                    <div class="roundContainer no-margin-side">
+                        <div class="row itemList">
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Autocomplete Search box</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Filter Search Results</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Sort Search Results</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Product List Check List details</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Product List Check Paging</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Product List Check Add to Cart</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Product Page Add to Cart</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Product Page Review List</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Product Page Description</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Product Page Related Products</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Shopping Cart Display items</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Shopping Cart Update quantity</h6></div></div>
+                            <div class="statusDecoration passed"><div class="col-xs-2 text-center"><span class="iconfortest"><i class="fa fa-check"></i></span></div> <div class="col-xs-10"><h6>Product Page Gallery</h6></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container no-gutter" id="resultCrawler">
+        <!--<div class="page-header">-->
+            <h4 class="left">Page Crawling Map</h4>
+        <!--</div>-->
+        <div class="container" id="mapContainer">
+            <div class="row userFlorWrap" id="tr1">
+                <h5>AI Detected User Flow Attempt #1</h5>
+                <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap" /><div class="title">Home Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">List Name</div></div>
+                <h6>Predefined QA Test Flow Detected - <span class="workFlowName">View Shopping List</span></h6>
+            </div>
+            <div class="row userFlorWrap" id="tr2">
+                <h5>AI Detected User Flow Attempt #2</h5>
+                <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap" /><div class="title">Home Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">List Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_03.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_04.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_05.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <h6>Predefined QA Test Flow Detected - <span class="workFlowName">Add to Shopping Cart</span></h6>
+            </div>
+            <div class="row userFlorWrap" id="tr3">
+                <h5>AI Detected User Flow Attempt #3</h5>
+                <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap" /><div class="title">Home Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">List Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_03.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_04.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_05.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_06.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <h6>Predefined QA Test Flow Detected - <span class="workFlowName">Add to Shopping Cart</span></h6>
+            </div>
+            <div class="row userFlorWrap" id="tr4">
+                <h5>AI Detected User Flow Attempt #4</h5>
+                <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap" /><div class="title">Home Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">List Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_03.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_04.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_05.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_06.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_05.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_04.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_03.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <h6>Predefined QA Test Flow Detected - <span class="workFlowName">Add to Shopping Cart</span></h6>
+            </div>
+            <div class="row userFlorWrap" id="tr5">
+                <h5>AI Detected User Flow Attempt #5</h5>
+                <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap" /><div class="title">Home Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">List Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_03.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_04.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_03.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_05.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <h6>Predefined QA Test Flow Detected - <span class="workFlowName">Add to Shopping Cart</span></h6>
+            </div>
+            <div class="row userFlorWrap" id="tr6">
+                <h5>AI Detected User Flow Attempt #6</h5>
+                <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap" /><div class="title">Home Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">List Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_03.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_05.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <h6>Predefined QA Test Flow Detected - <span class="workFlowName">Add to Shopping Cart</span></h6>
+            </div>
+            <div class="row userFlorWrap" id="tr7">
+                <h5>AI Detected User Flow Attempt #7</h5>
+                <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap" /><div class="title">Home Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">List Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_05.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <div class="imageWrap"><img src="img/app/Ecommerce_02.jpg" class="screenMap" /><div class="title">Screen Name</div></div>
+                <h6>Predefined QA Test Flow Detected - <span class="workFlowName">Add to Shopping Cart</span></h6>
+            </div>
+            <div class="row userFlorWrap" id="tr8">
+                <h5>AI Detected User Flow Attempt #8</h5>
+                <div class="imageWrap"><img src="img/app/Ecommerce_01.jpg" class="screenMap" /><div class="title">Home Name</div></div>
+                <h6>Predefined QA Test Flow Detected - <span class="workFlowName">Add to Shopping Cart</span></h6>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer class="footer nocontent">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 center">
+                <img alt="NimbleDroid" height="37" src="assets/logo-red.png">
+            </div>
+            <div class="col-xs-12 col-sm-8 text-right">
+                <ul class="list-inline">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/play">Play Apps</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a class="account-link" href="/account">Account</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <li><a href="http://blog.nimbledroid.com">Blog</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><a href="/privacy">Privacy &amp; Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <p>588 Broadway, Suite 503</p>
+                <p>New York, NY 10012</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <p>© NimbleDroid 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

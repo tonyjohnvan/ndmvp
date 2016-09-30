@@ -1,0 +1,200 @@
+<html class="gr__test05_nimbledroid_com">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=10,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>NimbleDroid | Automated, Comprehensive Performance Analysis for Every Build of Your App</title>
+    <link href="assets/css/style.css" media="all" rel="stylesheet">
+    <link href="assets/css/demo.css" media="all" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: transparent;
+            background-color: rgba(0, 0, 0, 0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+</head>
+<body data-gr-c-s-loaded="true">
+<div id="page-container">
+    <div class="nocontent" id="banner-and-sidebar">
+        <nav class="navbar navbar-inverse">
+            <div class="container no-gutter">
+                <div class="navbar-header col-xs-10 col-sm-1">
+                    <a class="navbar-brand nav-normal" href="/my_apps">
+                        <img alt="NimbleDroid" height="37" src="assets/logo3.png">
+                    </a>
+                </div>
+                <div class="navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right nav-normal">
+                        <li class="hidden-xs"><a class="btn btn-white upload-btn" href="/upload_apk" id="upload-apk"
+                                                 rel="nofollow">Upload APK</a></li>
+                        <li class="hidden-xs"><a href="/play">Play Apps</a></li>
+                        <li class="hidden-xs"><a href="/my_apps">My Apps</a></li>
+                        <li class="hidden-xs"><a class="user-sign-out-link" data-method="delete" href="/users/sign_out"
+                                                 rel="nofollow">Sign out</a></li>
+                        <li class="hidden-xs"><a href="/my_apps"><i class="fa fa-search"></i><span class="nd-red">.</span></a></li>
+                        <li class="hidden-xs">
+                            <a href="#" id="sidebar-toggle">
+                                <i class="fa fa-bars"></i><span class="nd-red">.</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="sidebar">
+            <div class="top-sec">
+                <ul class="visible-xs-block">
+                    <li>
+                        <a class="user-sign-out-link" data-method="delete" href="/users/sign_out" rel="nofollow">Sign out</a>
+                    </li>
+                </ul>
+                <a class="sidebar-close" href="#">
+                    <i class="fa fa-close"></i>
+                </a>
+            </div>
+            <ul>
+                <li class="visible-xs-block">
+                    <form accept-charset="UTF-8" action="/play/search" class="nd-search-box" method="get">
+                        <div style="display:none"></div>
+                        <div class="input-group">
+                            <input class="form-control nd-search-input" id="q" name="q"
+                                   placeholder="Search for your Google Play app" type="text">
+                            <span class="input-group-btn nd-search-btn">
+                  <button class="btn btn-default" type="submit">
+                  <i class="fa fa-search"></i>
+                  </button>
+                  </span>
+                        </div>
+                    </form>
+                </li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/my_apps">My Apps</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a class="account-link" href="/account" rel="nofollow">Account</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="http://blog.nimbledroid.com">Blog</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/jobs">Jobs</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="flash"></div>
+    </div>
+    <div class="container no-gutter" id="get-started">
+        <div class="page-header">
+            <h2 class="center">Get Started with NimbleDroid</h2>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 tab-content text-center">
+            <div class="tab-pane ui-feedback active" id="upload">
+                <div accept-charset="UTF-8" action="#" data-remote="true" method="post">
+                    <div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
+                    <div class="round-cont col-xs-12">
+                        <h3>Upload your app</h3>
+                        <input id="scenario" name="scenario" type="hidden" value="true">
+                        <div class="form-group">
+                            APK file
+                            <div class="file-upload">
+                                <input id="apk" name="apk" type="file">
+                                <label class="input-group-btn" for="apk">
+                                    <div class="btn btn-default filename" id="apk-filename">
+                                        Application-debug-unaligned.apk
+                                    </div>
+                                    <div class="btn btn-default btn-upload">
+                                        <i class="fa fa-folder-open"></i>
+                                        Choose File
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 center">
+                        <a class="btn btn-nd-sm" id="btn-wizard-upload" type="" href="step2.html">
+                            <div class="nd-spinner placeholder" style="display: none;">
+                                <i class="fa fa-refresh fa-spin"></i>
+                            </div>
+                            Next Step
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer nocontent">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 center">
+                <img alt="NimbleDroid" height="37" src="assets/logo-red.png">
+            </div>
+            <div class="col-xs-12 col-sm-8 text-right">
+                <ul class="list-inline">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/play">Play Apps</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a class="account-link" href="/account">Account</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <li><a href="http://blog.nimbledroid.com">Blog</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><a href="/privacy">Privacy &amp; Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <p>588 Broadway, Suite 503</p>
+                <p>New York, NY 10012</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <p>© NimbleDroid 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal fade" id="signmodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="close" class="close" data-dismiss="modal" type="button">
+            <span aria-hidden="true">
+            ×
+            </span>
+                </button>
+                <div id="modal-flash">
+                    <div id="modal-message"></div>
+                </div>
+            </div>
+            <div class="modal-body" id="signmodalbody">
+                loading..
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+</div>
+</body>
+</html>
